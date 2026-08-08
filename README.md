@@ -100,7 +100,7 @@ Plug 'catppuccin/nvim', { 'branch': 'vim', 'as': 'catppuccin' }
 ## Usage
 
 ```vim
-colorscheme catppuccin-nvim " catppuccin-latte, catppuccin-frappe, catppuccin-macchiato, catppuccin-mocha
+colorscheme catppuccin-nvim " catppuccin-latte, catppuccin-frappe, catppuccin-macchiato, catppuccin-mocha, catppuccin-espresso
 ```
 
 ```lua
@@ -113,7 +113,7 @@ There is no need to call `setup` if you don't want to change the default options
 
 ```lua
 require("catppuccin").setup({
-    flavour = "auto", -- latte, frappe, macchiato, mocha
+    flavour = "auto", -- latte, frappe, macchiato, mocha, espresso
     background = { -- :h background
         light = "latte",
         dark = "mocha",
@@ -195,6 +195,7 @@ local latte = require("catppuccin.palettes").get_palette "latte"
 local frappe = require("catppuccin.palettes").get_palette "frappe"
 local macchiato = require("catppuccin.palettes").get_palette "macchiato"
 local mocha = require("catppuccin.palettes").get_palette "mocha"
+local espresso = require("catppuccin.palettes").get_palette "espresso"
 ```
 
 Returns a table where the key is the name of the color and the value is the hex code.
@@ -217,6 +218,7 @@ require("catppuccin").setup {
         frappe = {},
         macchiato = {},
         mocha = {},
+        espresso = {},
     }
 }
 ```
@@ -269,9 +271,21 @@ require("catppuccin").setup {
                 Comment = { fg = mocha.flamingo },
             }
         end,
+        espresso = function(espresso)
+            return {
+                String = { fg = espresso.overlay2 },
+                Constant = { fg = espresso.green },
+            }
+        end,
     },
 }
 ```
+
+> [!NOTE]
+> Flavours differ only by their palette; every flavour shares the same highlight
+> group definitions. `highlight_overrides.<flavour>` is the supported way to give
+> one flavour a different palette *role* for a group, as in the `espresso`
+> example above.
 
 ## Integrations
 
@@ -409,7 +423,7 @@ Use this to set it up:
 
 ```lua
 require("barbecue").setup {
-  theme = "catppuccin-nvim", -- catppuccin-latte, catppuccin-frappe, catppuccin-macchiato, catppuccin-mocha
+  theme = "catppuccin-nvim", -- catppuccin-latte, catppuccin-frappe, catppuccin-macchiato, catppuccin-mocha, catppuccin-espresso
 }
 ```
 
