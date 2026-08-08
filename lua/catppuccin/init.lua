@@ -90,7 +90,7 @@ local M = {
 		color_overrides = {},
 		highlight_overrides = {},
 	},
-	flavours = { latte = 1, frappe = 2, macchiato = 3, mocha = 4 },
+	flavours = { latte = 1, frappe = 2, macchiato = 3, mocha = 4, espresso = 5 },
 	path_sep = jit and (jit.os == "Windows" and "\\" or "/") or package.config:sub(1, 1),
 }
 
@@ -116,7 +116,7 @@ local function get_flavour(default)
 	if flavour and not M.flavours[flavour] then
 		vim.notify(
 			string.format(
-				"Catppuccin (error): Invalid flavour '%s', flavour must be 'latte', 'frappe', 'macchiato', 'mocha' or 'auto'",
+				"Catppuccin (error): Invalid flavour '%s', flavour must be 'latte', 'frappe', 'macchiato', 'mocha', 'espresso' or 'auto'",
 				flavour
 			),
 			vim.log.levels.ERROR
