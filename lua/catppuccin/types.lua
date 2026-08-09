@@ -171,6 +171,7 @@
 -- ```
 ---@field fidget boolean?
 ---@field flash boolean?
+---@field fyler boolean?
 ---@field fzf boolean?
 ---@field gitgutter boolean?
 ---@field gitgraph boolean?

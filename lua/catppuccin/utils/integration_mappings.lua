@@ -17,6 +17,7 @@ local M = {
 	["dropbar.nvim"] = "dropbar",
 	["fidget.nvim"] = "fidget",
 	["flash.nvim"] = "flash",
+	["fyler.nvim"] = "fyler",
 	["fzf-lua"] = "fzf",
 	["gitgraph.nvim"] = "gitgraph",
 	["gitsigns.nvim"] = "gitsigns",
