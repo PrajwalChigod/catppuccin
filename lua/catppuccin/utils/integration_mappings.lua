@@ -35,6 +35,7 @@ local M = {
 	["neo-tree.nvim"] = "neotree",
 	["neogit"] = "neogit",
 	["neotest"] = "neotest",
+	["noice.nvim"] = "noice",
 	["notifier.nvim"] = "notifier",
 	["nvim-cmp"] = "cmp",
 	["nvim-dap"] = "dap",

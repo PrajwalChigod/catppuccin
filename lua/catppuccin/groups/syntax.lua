@@ -4,7 +4,7 @@ function M.get()
 	return {
 		Comment = { fg = U.vary_color({ espresso = C.overlay0 }, C.overlay2), style = O.styles.comments }, -- just comments
 		SpecialComment = { link = "Special" }, -- special things inside a comment
-		Constant = { fg = U.vary_color({ espresso = C.teal }, C.peach) }, -- (preferred) any constant
+		Constant = { fg = U.vary_color({ espresso = C.flamingo }, C.peach), style = U.vary_color({ espresso = { "bold" } }, {}) }, -- (preferred) any constant
 		String = { fg = U.vary_color({ espresso = C.subtext0 }, C.green), style = O.styles.strings or {} }, -- a string constant: "this is a string"
 		Character = { fg = C.teal }, --  a character constant: 'c', '\n'
 		Number = { fg = U.vary_color({ espresso = C.yellow }, C.peach), style = O.styles.numbers or {} }, --   a number constant: 234, 0xff

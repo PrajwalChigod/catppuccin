@@ -7,9 +7,10 @@ local virtual_text = O.lsp_styles.virtual_text
 function M.get()
 	return { -- Personally the default integration is already pretty good
 		NoiceCmdline = { fg = C.text },
-		NoiceCmdlineIcon = { fg = C.sky, style = virtual_text.information },
+		NoiceCmdlineIcon = { fg = U.vary_color({ espresso = C.sapphire }, C.sky), style = virtual_text.information },
 		NoiceCmdlineIconSearch = { fg = C.yellow },
-		NoiceCmdlinePopupBorder = { fg = C.lavender },
+		NoiceCmdlinePopupBorder = { fg = U.vary_color({ espresso = C.sapphire }, C.lavender) },
+		NoiceCmdlinePopupTitle = { fg = U.vary_color({ espresso = C.sapphire }, C.sky) },
 		NoiceCmdlinePopupBorderSearch = { fg = C.yellow },
 		NoiceConfirmBorder = { fg = C.blue },
 		NoiceMini = { fg = C.subtext0, blend = 0 },

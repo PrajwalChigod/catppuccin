@@ -6,11 +6,10 @@ function M.get()
 	local inlay_hints = O.lsp_styles.inlay_hints
 
 	local error = C.red
-	local warning = C.yellow
-	local info = C.sky
-	local hint = C.teal
+	local warning = U.vary_color({ espresso = C.peach }, C.yellow)
+	local info = U.vary_color({ espresso = C.green }, C.sky)
+	local hint = U.vary_color({ espresso = C.yellow }, C.teal)
 	local ok = C.green
-	local darkening_percentage = 0.095
 
 	return {
 		-- These groups are for the native LSP client. Some other LSP clients may
@@ -22,27 +21,27 @@ function M.get()
 		-- highlight diagnostics in numberline
 
 		DiagnosticVirtualTextError = {
-			bg = O.transparent_background and C.none or U.darken(error, darkening_percentage, C.base),
+			bg = C.none,
 			fg = error,
 			style = virtual_text.errors,
 		}, -- Used as the mantle highlight group. Other Diagnostic highlights link to this by default
 		DiagnosticVirtualTextWarn = {
-			bg = O.transparent_background and C.none or U.darken(warning, darkening_percentage, C.base),
+			bg = C.none,
 			fg = warning,
 			style = virtual_text.warnings,
 		}, -- Used as the mantle highlight group. Other Diagnostic highlights link to this by default
 		DiagnosticVirtualTextInfo = {
-			bg = O.transparent_background and C.none or U.darken(info, darkening_percentage, C.base),
+			bg = C.none,
 			fg = info,
 			style = virtual_text.information,
 		}, -- Used as the mantle highlight group. Other Diagnostic highlights link to this by default
 		DiagnosticVirtualTextHint = {
-			bg = O.transparent_background and C.none or U.darken(hint, darkening_percentage, C.base),
+			bg = C.none,
 			fg = hint,
 			style = virtual_text.hints,
 		}, -- Used as the mantle highlight group. Other Diagnostic highlights link to this by default
 		DiagnosticVirtualTextOk = {
-			bg = O.transparent_background and C.none or U.darken(hint, darkening_percentage, C.base),
+			bg = C.none,
 			fg = ok,
 			style = virtual_text.ok,
 		}, -- Used as the mantle highlight group. Other Diagnostic highlights link to this by default
