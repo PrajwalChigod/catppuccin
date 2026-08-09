@@ -4,7 +4,7 @@ local M = {
 		flavour = "auto",
 		background = {
 			light = "latte",
-			dark = "mocha",
+			dark = "espresso",
 		},
 		compile_path = vim.fn.stdpath "cache" .. "/catppuccin",
 		transparent_background = false,

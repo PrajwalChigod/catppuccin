@@ -18,13 +18,13 @@ function M.get()
 		Directory = { fg = C.blue }, -- directory names (and other special names in listings)
 		EndOfBuffer = { fg = C.surface1 }, -- filler lines (~) after the end of the buffer. By default, this is highlighted like |hl-NonText|.
 		ErrorMsg = { fg = C.red, style = { "bold", "italic" } }, -- error messages on the command line
-		VertSplit = { fg = O.transparent_background and C.surface1 or C.crust }, -- the column separating vertically split windows
+		VertSplit = { fg = O.transparent_background and C.surface1 or U.vary_color({ espresso = C.surface2 }, C.crust) }, -- the column separating vertically split windows
 		Folded = { fg = C.blue, bg = O.transparent_background and C.none or C.surface1 }, -- line used for closed folds
 		FoldColumn = { fg = C.overlay0 }, -- 'foldcolumn'
-		SignColumn = { fg = C.surface1 }, -- column where |signs| are displayed
-		SignColumnSB = { bg = C.crust, fg = C.surface1 }, -- column where |signs| are displayed
+		SignColumn = { fg = U.vary_color({ espresso = C.overlay0 }, C.surface1) }, -- column where |signs| are displayed
+		SignColumnSB = { bg = C.crust, fg = U.vary_color({ espresso = C.overlay0 }, C.surface1) }, -- column where |signs| are displayed
 		Substitute = { bg = C.surface1, fg = U.vary_color({ latte = C.red }, C.pink) }, -- |:substitute| replacement text highlighting
-		LineNr = { fg = C.surface1 }, -- Line number for ":number" and ":#" commands, and when 'number' or 'relativenumber' option is set.
+		LineNr = { fg = U.vary_color({ espresso = C.overlay0 }, C.surface1) }, -- Line number for ":number" and ":#" commands, and when 'number' or 'relativenumber' option is set.
 		CursorLineNr = { fg = C.lavender }, -- Like LineNr when 'cursorline' or 'relativenumber' is set for the cursor line. highlights the number in numberline.
 		MatchParen = { fg = C.peach, bg = U.darken(C.surface1, 0.70, C.base), style = { "bold" } }, -- The character under the cursor or just before it, if it is a paired bracket, and its match. |pi_paren.txt|
 		ModeMsg = { fg = C.text, style = { "bold" } }, -- 'showmode' message (e.g., "-- INSERT -- ")
@@ -106,7 +106,7 @@ function M.get()
 		WildMenu = { bg = C.overlay0 }, -- current match in 'wildmenu' completion
 		WinBar = { fg = C.rosewater },
 		WinBarNC = { link = "WinBar" },
-		WinSeparator = { fg = O.transparent_background and C.surface1 or C.crust },
+		WinSeparator = { fg = O.transparent_background and C.surface1 or U.vary_color({ espresso = C.surface2 }, C.crust) },
 	}
 end
 

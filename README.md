@@ -116,7 +116,7 @@ require("catppuccin").setup({
     flavour = "auto", -- latte, frappe, macchiato, mocha, espresso
     background = { -- :h background
         light = "latte",
-        dark = "mocha",
+        dark = "espresso",
     },
     transparent_background = false, -- disables setting the background color.
     float = {

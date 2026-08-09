@@ -130,6 +130,7 @@
 -- -- "catppuccin-frappe"
 -- -- "catppuccin-macchiato"
 -- -- "catppuccin-mocha"
+-- -- "catppuccin-espresso"
 --   theme = "catppuccin",
 -- }
 ---```

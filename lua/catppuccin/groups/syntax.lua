@@ -2,14 +2,14 @@ local M = {}
 
 function M.get()
 	return {
-		Comment = { fg = C.overlay2, style = O.styles.comments }, -- just comments
+		Comment = { fg = U.vary_color({ espresso = C.overlay0 }, C.overlay2), style = O.styles.comments }, -- just comments
 		SpecialComment = { link = "Special" }, -- special things inside a comment
-		Constant = { fg = C.peach }, -- (preferred) any constant
-		String = { fg = C.green, style = O.styles.strings or {} }, -- a string constant: "this is a string"
+		Constant = { fg = U.vary_color({ espresso = C.teal }, C.peach) }, -- (preferred) any constant
+		String = { fg = U.vary_color({ espresso = C.subtext0 }, C.green), style = O.styles.strings or {} }, -- a string constant: "this is a string"
 		Character = { fg = C.teal }, --  a character constant: 'c', '\n'
-		Number = { fg = C.peach, style = O.styles.numbers or {} }, --   a number constant: 234, 0xff
+		Number = { fg = U.vary_color({ espresso = C.yellow }, C.peach), style = O.styles.numbers or {} }, --   a number constant: 234, 0xff
 		Float = { link = "Number" }, --    a floating point constant: 2.3e10
-		Boolean = { fg = C.peach, style = O.styles.booleans or {} }, --  a boolean constant: TRUE, false
+		Boolean = { fg = U.vary_color({ espresso = C.yellow }, C.peach), style = O.styles.booleans or {} }, --  a boolean constant: TRUE, false
 		Identifier = { fg = C.flamingo, style = O.styles.variables or {} }, -- (preferred) any variable name
 		Function = { fg = C.blue, style = O.styles.functions or {} }, -- function name (also: methods for classes)
 		Statement = { fg = C.mauve }, -- (preferred) any statement
@@ -29,7 +29,7 @@ function M.get()
 		StorageClass = { fg = C.yellow }, -- static, register, volatile, etc.
 		Structure = { fg = C.yellow }, --  struct, union, enum, etc.
 		Special = { fg = C.pink }, -- (preferred) any special symbol
-		Type = { fg = C.yellow, style = O.styles.types or {} }, -- (preferred) int, long, char, etc.
+		Type = { fg = U.vary_color({ espresso = C.peach }, C.yellow), style = O.styles.types or {} }, -- (preferred) int, long, char, etc.
 		Typedef = { link = "Type" }, --  A typedef
 		SpecialChar = { link = "Special" }, -- special character in a constant
 		Tag = { fg = C.lavender, style = { "bold" } }, -- you can use CTRL-] on this

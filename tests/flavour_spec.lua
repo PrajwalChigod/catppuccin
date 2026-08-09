@@ -17,7 +17,7 @@ describe("set background to", function()
 	end)
 	it("dark", function()
 		vim.o.background = "dark"
-		assert.equals("catppuccin-mocha", vim.g.colors_name)
+		assert.equals("catppuccin-espresso", vim.g.colors_name)
 	end)
 end)
 
@@ -31,7 +31,7 @@ describe("respect vim.o.background =", function()
 	it("dark", function()
 		vim.o.background = "dark"
 		vim.cmd.colorscheme "catppuccin-nvim"
-		assert.equals("catppuccin-mocha", vim.g.colors_name)
+		assert.equals("catppuccin-espresso", vim.g.colors_name)
 	end)
 end)
 
@@ -52,6 +52,10 @@ describe("change flavour to", function()
 	it("mocha", function()
 		vim.cmd.colorscheme "catppuccin-mocha"
 		assert.equals("catppuccin-mocha", vim.g.colors_name)
+	end)
+	it("espresso", function()
+		vim.cmd.colorscheme "catppuccin-espresso"
+		assert.equals("catppuccin-espresso", vim.g.colors_name)
 	end)
 end)
 
@@ -77,6 +81,11 @@ describe("respect setup flavour =", function()
 		vim.cmd.colorscheme "catppuccin-nvim"
 		assert.equals("catppuccin-mocha", vim.g.colors_name)
 	end)
+	it("espresso", function()
+		require("catppuccin").setup { flavour = "espresso" }
+		vim.cmd.colorscheme "catppuccin-nvim"
+		assert.equals("catppuccin-espresso", vim.g.colors_name)
+	end)
 end)
 
 describe("(deprecated) respect vim.g.catppuccin_flavour =", function()
@@ -100,5 +109,10 @@ describe("(deprecated) respect vim.g.catppuccin_flavour =", function()
 		vim.g.catppuccin_flavour = "mocha"
 		vim.cmd.colorscheme "catppuccin-nvim"
 		assert.equals("catppuccin-mocha", vim.g.colors_name)
+	end)
+	it("espresso", function()
+		vim.g.catppuccin_flavour = "espresso"
+		vim.cmd.colorscheme "catppuccin-nvim"
+		assert.equals("catppuccin-espresso", vim.g.colors_name)
 	end)
 end)
