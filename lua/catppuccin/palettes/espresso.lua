@@ -34,7 +34,7 @@ return {
 	surface2 = "#585b70",
 	surface1 = "#45475a",
 	surface0 = "#313244",
-	base = "#09090d",
-	mantle = "#060609",
-	crust = "#030305",
+	base = "#14141E",
+	mantle = "#101018",
+	crust = "#0B0B12",
 }

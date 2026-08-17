@@ -2,7 +2,7 @@ local M = {}
 
 function M.get()
 	return {
-		Comment = { fg = U.vary_color({ espresso = C.overlay0 }, C.overlay2), style = O.styles.comments }, -- just comments
+		Comment = { fg = U.vary_color({ espresso = C.overlay1 }, C.overlay2), style = O.styles.comments }, -- just comments
 		SpecialComment = { link = "Special" }, -- special things inside a comment
 		Constant = { fg = U.vary_color({ espresso = C.flamingo }, C.peach), style = U.vary_color({ espresso = { "bold" } }, {}) }, -- (preferred) any constant
 		String = { fg = U.vary_color({ espresso = C.subtext0 }, C.green), style = O.styles.strings or {} }, -- a string constant: "this is a string"
